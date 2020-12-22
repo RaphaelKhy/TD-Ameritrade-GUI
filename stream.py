@@ -47,7 +47,7 @@ class AsyncioThread(threading.Thread):
     def level_one_handler(self, msg):
         content_dictionary = msg.get('content')[0] 
         self.the_queue.put(content_dictionary)
-        print(content_dictionary)
+        #print(content_dictionary)
 
 
 class GUI:
@@ -90,16 +90,16 @@ class GUI:
             content_dictionary = self.the_queue.get()
             if 'key' in content_dictionary:
                 self.symbol.set(content_dictionary.get('key'))
-                print('symbol refresh')
+                #print('symbol refresh')
             if 'LAST_PRICE' in content_dictionary:
                 self.last_price.set(content_dictionary.get('LAST_PRICE'))
-                print('last price refresh')
+                #print('last price refresh')
             if 'BID_PRICE' in content_dictionary:
                 self.bid_price.set(content_dictionary.get('BID_PRICE'))
-                print('bid refresh')
+                #print('bid refresh')
             if 'ASK_PRICE' in content_dictionary:
                 self.ask_price.set(content_dictionary.get('ASK_PRICE'))
-                print('ask refresh')
+                #print('ask refresh')
 
         #  timer to refresh the gui with data from the asyncio thread
         self.root.after(100, self.refresh_data)  # called only once!
