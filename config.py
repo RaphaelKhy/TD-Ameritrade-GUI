@@ -1,4 +1,4 @@
-API_KEY = '' #Your app's Consumer Key 
+API_KEY = '' # Your app's Consumer Key 
 ACCOUNT_ID = '' # Your account number
 REDIRECT_URI='https://localhost'
 TOKEN_PATH= '' 
