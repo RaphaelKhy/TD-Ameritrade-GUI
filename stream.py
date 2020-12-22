@@ -4,11 +4,8 @@ from tda.streaming import StreamClient
 import sys
 import fileinput
 import asyncio
-import json
 import config
 import get_token
-import pandas as pd
-import csv
 from tkinter import *
 import threading
 import random
